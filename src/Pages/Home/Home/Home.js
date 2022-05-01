@@ -1,9 +1,10 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            <h1>Welcome to Fitness Pro Equipment Warehouse!!!</h1>
+            <Banner></Banner>
         </div>
     );
 };
