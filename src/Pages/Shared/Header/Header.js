@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../../images/logo/Fitness Pro.png'
+import logo from '../../../images/logo/Fitness-Pro.png'
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky="top" collapseOnSelect expand="lg" bg='dark' variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="home">
                     <img width={30} src={logo} alt="" />
@@ -13,7 +13,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#inventory">Inventory</Nav.Link>
+                        <Nav.Link href="home#inventory">Inventory</Nav.Link>
+                        <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="manageItems">Manage Items</Nav.Link>

@@ -22,7 +22,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h1 className='text-dark my-0 pb-2 border-bottom border-secondary'>Home Gym Equipment</h1>
+                    <h1 style={{ backgroundColor: 'rgba(255,255,255,0.75)' }} className='text-dark my-0 pb-2 border-bottom border-secondary'>Home Gym Equipment</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,7 +33,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className='text-dark my-0 pb-2 border-bottom border-secondary'>Strength Training Equipment</h1>
+                    <h1 style={{ backgroundColor: 'rgba(255,255,255,0.75)' }} className='text-dark my-0 pb-2 border-bottom border-secondary'>Strength Training Equipment</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -44,7 +44,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className='text-dark my-0 pb-2 border-bottom border-secondary'>Cardio Equipment</h1>
+                    <h1 style={{ backgroundColor: 'rgba(255,255,255,0.75)' }} className='text-dark my-0 pb-2 border-bottom border-secondary'>Cardio Equipment</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -55,7 +55,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className='text-dark my-0 pb-2 border-bottom border-secondary'>Boxing Equipment</h1>
+                    <h1 style={{ backgroundColor: 'rgba(255,255,255,0.75)' }} className='text-dark my-0 pb-2 border-bottom border-secondary'>Boxing Equipment</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -66,7 +66,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className='text-dark my-0 pb-2 border-bottom border-secondary'>Rubber Flooring</h1>
+                    <h1 style={{ backgroundColor: 'rgba(255,255,255,0.75)' }} className='text-dark my-0 pb-2 border-bottom border-secondary'>Rubber Flooring</h1>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
