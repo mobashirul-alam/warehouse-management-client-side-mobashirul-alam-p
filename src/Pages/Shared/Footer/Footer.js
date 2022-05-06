@@ -8,7 +8,7 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
         <div className='bg-dark py-3 m-0 row'>
-            <div className='col-12 col-md-6 mb-3 mb-md-0'>
+            <div className='col-12 col-md-6 mb-3 mb-md-0 text-center'>
                 <div className="footer">
                     <i className="fa-brands fa-facebook-f fs-3"></i>
                     <i className="fa-brands fa-twitter fs-3"></i>
