@@ -29,7 +29,7 @@ const Register = () => {
         }
     }, [error, updateError]);
 
-    const handleSubmit = async (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
         const email = emailRef.current.value;
@@ -46,7 +46,7 @@ const Register = () => {
         <div className='container mb-5'>
             <h1 className='mt-2 mb-3 display-6 text-center'>Create your account</h1>
             <div className='border border-success p-3 rounded-3'>
-                <Form onSubmit={handleSubmit} className='p-3'>
+                <Form onSubmit={handleRegister} className='p-3'>
                     <Form.Group className="mb-3">
                         <Form.Label>Your Name</Form.Label>
                         <Form.Control ref={nameRef} type="text" placeholder="Your Name" required />
