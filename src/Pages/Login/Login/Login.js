@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     return (
         <div className='container mb-5'>
-            <h1 className='my-3'>Login</h1>
+            <h1 className='mt-2 mb-3 display-6 text-center'>Log in to your account</h1>
             <div className='border border-success p-3 rounded-3'>
                 <Form className='p-3'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -18,7 +19,7 @@ const Login = () => {
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <Button variant="secondary" type="submit">
-                        Submit
+                        Login
                     </Button>
                 </Form>
                 <div className='px-3'>
@@ -35,6 +36,7 @@ const Login = () => {
                         </button>
                     </p>
                 </div>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );

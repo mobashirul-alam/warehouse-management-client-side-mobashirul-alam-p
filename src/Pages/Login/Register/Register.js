@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     return (
         <div className='container mb-5'>
-            <h1 className='my-3'>Register</h1>
+            <h1 className='mt-2 mb-3 display-6 text-center'>Create your account</h1>
             <div className='border border-success p-3 rounded-3'>
                 <Form className='p-3'>
                     <Form.Group className="mb-3">
@@ -26,7 +27,7 @@ const Register = () => {
                             label='Accept our Privacy Policy and Terms of Service' />
                     </Form.Group>
                     <Button variant="secondary" type="submit">
-                        Submit
+                        Register
                     </Button>
                 </Form>
                 <div className='px-3'>
@@ -37,6 +38,7 @@ const Register = () => {
                         </Link>
                     </p>
                 </div>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
