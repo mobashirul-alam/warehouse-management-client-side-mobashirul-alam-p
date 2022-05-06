@@ -17,17 +17,16 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
                     <Button variant="secondary" type="submit">
                         Submit
                     </Button>
                 </Form>
                 <div className='px-3'>
-                    <p>
+                    <p className='m-0'>
                         New to Fitness Pro ?
-                        <Link to='/register' className='text-decoration-none ps-1'>Please Register</Link>
+                        <Link to='/register' className='text-decoration-none ps-1'>
+                            Please Register
+                        </Link>
                     </p>
                     <p>
                         Forget password ?
