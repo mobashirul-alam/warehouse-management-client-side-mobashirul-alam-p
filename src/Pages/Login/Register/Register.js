@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -11,6 +11,7 @@ const Register = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const [agreePolicyTerms, setAgreePolicyTerms] = useState(false);
+    const [err, setErr] = useState('');
 
     const [
         createUserWithEmailAndPassword,
@@ -20,6 +21,13 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    useEffect(() => {
+        if (error || updateError) {
+            const errMessage = <p>Error: {error?.message} {updateError?.message}</p>;
+            setErr(errMessage);
+        }
+    }, [error, updateError]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -66,6 +74,7 @@ const Register = () => {
                     </Button>
                 </Form>
                 <div className='px-3'>
+                    <p className='text-danger'>{err}</p>
                     <p>
                         Already have an account ?
                         <Link to='/login' className='text-decoration-none ps-1'>
