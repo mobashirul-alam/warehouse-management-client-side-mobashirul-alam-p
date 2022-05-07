@@ -1,10 +1,98 @@
 [
     {
-        "name": "Volcker Large home fitness equipment ",
+        "name": "Volcker Large home fitness equipment",
         "img": "https://i.ibb.co/xDgJWvg/0cd248e3a0180694baf28aeb006d91df.jpg",
         "description": "A Multi-functional combination equipment, 24 Gym function with comprehensive training. Complete home gym in a sleek silver package, it will deliver intense full-body workout at home.",
         "price": "1199",
-        "quantity": 50,
+        "quantity": 60,
         "supplierName": "Sky-fall Sports"
+    },
+    {
+        "name": "KONLEGA Home Gym (4 station) - K3004A",
+        "img": "https://i.ibb.co/Vvydj9Y/Konlega-home-gym.jpg",
+        "description": "Weight Plate: 250 KG, Product Weight: 248 KG, For Exercise: Butterfly press, Lateral pull down ,Chest press ,Leg extension & leg press ,Seated & upright row ,Pulley with cover and bearing ,Lift knee.",
+        "price": "1099",
+        "quantity": 80,
+        "supplierName": "Konlega Sports"
+    },
+    {
+        "name": "Evertop Home Gym ET-2540 - Gray",
+        "img": "https://i.ibb.co/x8v0mJy/Evertop-home-gym.jpg",
+        "description": "Multi exercise home gym, providing up to 50kgs resistance, helps to tone up and increase your strength & muscle mass, increase your metabolic rate. Training your shoulders, breast, back, legs, abdomen and arms.",
+        "price": "799",
+        "quantity": 150,
+        "supplierName": "Evertop Sports"
+    },
+    {
+        "name": "WNQ Commercial Power Rack F1 A694",
+        "img": "https://i.ibb.co/RH8hdDQ/wnq-commercial-power-rack.png",
+        "description": "Frame Tube Size: Oval 76*3 mm. Available function: Squat, Weight Lift, Chaining Exercise etc. Gross weight : 275 Kg",
+        "price": "1399",
+        "quantity": 70,
+        "supplierName": "WNQ Sports"
+    },
+    {
+        "name": "Bike Exercise Ball Commercial - White",
+        "img": "https://i.ibb.co/gMx6Gy6/Bike-exercise-flywheel.jpg",
+        "description": "An onboard computer is fitted to challenge your fitness goals and to provide you with critical data during your workout. Has a soft cushioned PU leather racing seat that is fully adjustable and a frame with an impressive maximum rider weight of 150kg.",
+        "price": "499",
+        "quantity": 180,
+        "supplierName": "Fly Wheel Sports"
+    },
+    {
+        "name": "Motorized Treadmill JOGWAY T-18A (4HP-AC)",
+        "img": "https://i.ibb.co/vBSbp7g/Jogway-motorized-treadmill.jpg",
+        "description": "A 7 inch Touch Screen fitted with LCD Blue backlit display (7 inch option). Maximum users weight- 150kg. Motor power- 4.0 HP continuous, Speed range- 1-22 km/h. Has a Smart Cooling fan.",
+        "price": "1299",
+        "quantity": 120,
+        "supplierName": "Jogway Sports"
+    },
+    {
+        "name": "Manual Treadmill Tesoro R900",
+        "img": "https://i.ibb.co/cX41VJB/Tesoro-manual-treadmill.jpg",
+        "description": "Operated manually by user's leg power. Does not create any sound which can disturb your neighbors while working out. High Weight Capacity With user weight up to 160kg, no limited speed.",
+        "price": "1200",
+        "quantity": 150,
+        "supplierName": "Tesoro Sports"
+    },
+    {
+        "name": "Rubber Coated Straight and Curl Barbell Set",
+        "img": "https://i.ibb.co/BCzgMMG/barbell-set-iron-bull.jpg",
+        "description": "Solid steel heads with rubber encased and perfect surface. Chrome-plated straight bar with knurling for easy grip. Fully welded as a single-piece product. 5 pcs straight and 5 pcs curl barbell.",
+        "price": "999",
+        "quantity": 250,
+        "supplierName": "Iron-Bull Sports"
+    },
+    {
+        "name": "Rubber Hex Dumbbell 40kg double",
+        "img": "https://i.ibb.co/nC8ZWnK/40kg-dumbbell-iron-bull.jpg",
+        "description": "Dumbbell for resistance training—great for arms, chest, back, core, and legs Solid cast-iron core for reliable strength; will not bend or break after repeated use Hexagon-shaped rubber-encased ends help prevent rolling and promote stay-in-place storage",
+        "price": "399",
+        "quantity": 250,
+        "supplierName": "Iron-Bull Sports"
+    },
+    {
+        "name": "30 kg Hex Dumbbell - Black",
+        "img": "https://i.ibb.co/SnhBbtW/30kg-Hex-Dumbbell-fitness-gp.jpg",
+        "description": "Perfect addition to aerobics, step workouts.Comfortable, non-slip coating is easy on floors. Great for arms, chest, back, core, and legs solid cast iron core for reliable strength.",
+        "price": "350",
+        "quantity": 190,
+        "supplierName": "Fitness GP Sports"
+    },
+    {
+        "name": "Professional incline decline dumbbell exercise bench",
+        "img": "https://i.ibb.co/YD02n0J/incline-decline-bench-national.png",
+        "description": "Soft and water resistant 70 mm thick leather. 13 different position adjustment elastic bolt lock. Thickened steel pipe. Product weight: 25KG, User weight: 150KG",
+        "price": "299",
+        "quantity": 130,
+        "supplierName": "National Fit Sports"
+    },
+    {
+        "name": "Six Pack Care with Cycle - Black",
+        "img": "https://i.ibb.co/kHkz2Wd/six-pack-care-metal.jpg",
+        "description": "8 Different work outs in one machine. Exercise your legs, chest, arms, abs & more. Works at 76 specific areas on the body. Made from high quality steel with Fully padded bench.",
+        "price": "250",
+        "quantity": 200,
+        "supplierName": "Metal Sports"
     }
 ]
