@@ -1,3 +1,4 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -35,6 +36,7 @@ const Header = () => {
                             user
                                 ?
                                 <button
+                                    onClick={() => signOut(auth)}
                                     className='btn btn-link text-decoration-none text-light'>
                                     Log Out
                                 </button>
