@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -21,6 +22,8 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending, updateError] = useSendPasswordResetEmail(auth);
+
     useEffect(() => {
         if (error) {
             const errMessage = <p>Error: {error?.message}</p>;
@@ -34,6 +37,17 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
     }
+
+    const handleResetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Password reset email sent to your mail');
+        }
+        else {
+            toast('Please input your email')
+        }
+    };
 
     if (user) {
         navigate(from, { replace: true });
@@ -67,7 +81,9 @@ const Login = () => {
                     </p>
                     <p>
                         Forget password ?
-                        <button className='btn btn-link text-decoration-none border-0 p-1'>
+                        <button
+                            onClick={handleResetPassword}
+                            className='btn btn-link text-decoration-none border-0 p-1'>
                             Reset Password
                         </button>
                     </p>

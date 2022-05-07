@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import ProductDetails from '../../ProductManagement/ProductDetails/ProductDetails';
 
 const Inventory = () => {
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const url = `http://localhost:5000/products`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [])
+    }, []);
+
+    const handleManageInventories = () => {
+        navigate('/manageItems')
+    }
     return (
         <div id='inventory' className='container my-5'>
             <h1 className='text-center mb-5 border-bottom border-secondary w-50 mx-auto pb-2'>Our Inventory</h1>
@@ -20,6 +26,15 @@ const Inventory = () => {
                         product={product}
                     ></ProductDetails>)
                 }
+            </div>
+            <div className='w-100'>
+                <Link to={'/manageItems'} className='text-decoration-none'>
+                    <button
+                        onClick={handleManageInventories}
+                        className='btn btn-link text-decoration-none d-block mx-auto p-3'>
+                        Manage Inventories
+                    </button>
+                </Link>
             </div>
         </div>
     );
