@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useLoadProducts from '../../../hooks/useLoadProducts';
 import SingleItemManage from '../SingleItemManage/SingleItemManage';
 
 const ManageItems = () => {
+    const navigate = useNavigate();
     const [products, setProducts] = useLoadProducts();
 
     const handleDeleteItem = id => {
@@ -33,6 +35,12 @@ const ManageItems = () => {
                         handleDeleteItem={handleDeleteItem}
                     ></SingleItemManage>)
                 }
+            </div>
+            <div className='w-100 mt-3 mb-5'>
+                <button onClick={() => navigate('/addItem')}
+                    className='btn btn-primary d-block mx-auto w-25'>
+                    Add New Item
+                </button>
             </div>
         </div>
     );
