@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const SingleProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
+    const { _id, name, img, description, price, quantity, supplierName } = product;
+    const restockItemRef = useRef();
 
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`;
@@ -12,7 +15,43 @@ const SingleProductDetail = () => {
             .then(data => setProduct(data))
     }, [id]);
 
-    const { _id, name, img, description, price, quantity, supplierName } = product;
+    const handleDeliveredBtn = id => {
+        const newQuantity = parseInt(quantity) - 1;
+        const updatedQuantity = { newQuantity };
+
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast('Product delivered successfully.');
+            })
+    };
+
+    const handleRestock = (id, e) => {
+        const restockQuantity = restockItemRef.current.value;
+        const newQuantity = parseInt(quantity) + parseInt(restockQuantity);
+        const updatedQuantity = { newQuantity };
+
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                e.target.reset();
+                // toast('Product delivered successfully.');
+            })
+    }
 
     return (
         <div className='container'>
@@ -39,13 +78,24 @@ const SingleProductDetail = () => {
                         </p>
                         <p className='fs-5'>Supplier : {supplierName}</p>
                     </div>
-                    <button
-                        className='btn btn-primary'>
+                    <button onClick={() => handleDeliveredBtn(_id)}
+                        className='btn btn-primary mb-5'>
                         Delivered
                     </button>
                 </div>
-                <div className="col-4">
+                <div className="col-4 mt-5 text-center">
+                    <h3>Restock The Items</h3>
+                    <form onSubmit={() => handleRestock(_id)}>
+                        <input ref={restockItemRef} className='px-2 py-1' type="number" name="restockItem" id="" placeholder='Quantity' />
+                        <br />
+                        <input className='btn btn-primary mt-2' type="submit" value="Restock" />
+                    </form>
 
+                    {/* <br />
+                    <button onClick={() => handleRestockBtn(_id)}
+                        className='btn btn-primary mt-2'>
+                        Restock
+                    </button> */}
                 </div>
             </div>
         </div>
