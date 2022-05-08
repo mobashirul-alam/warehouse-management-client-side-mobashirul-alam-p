@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const SingleProductDetail = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const { _id, name, img, description, price, quantity, supplierName } = product;
@@ -91,11 +92,13 @@ const SingleProductDetail = () => {
                         <input className='btn btn-primary mt-2' type="submit" value="Restock" />
                     </form>
 
-                    {/* <br />
-                    <button onClick={() => handleRestockBtn(_id)}
-                        className='btn btn-primary mt-2'>
-                        Restock
-                    </button> */}
+                    <Link to={'/manageItems'} className='text-decoration-none'>
+                        <button
+                            onClick={() => navigate('/manageItems')}
+                            className='btn btn-link text-decoration-none d-block mx-auto p-3'>
+                            Manage Inventories
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

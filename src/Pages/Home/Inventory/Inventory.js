@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useLoadProducts from '../../../hooks/useLoadProducts';
 import ProductDetails from '../../ProductManagement/ProductDetails/ProductDetails';
 
 const Inventory = () => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useLoadProducts();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const url = `http://localhost:5000/products`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
 
     const handleManageInventories = () => {
         navigate('/manageItems')
