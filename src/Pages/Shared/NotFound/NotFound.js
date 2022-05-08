@@ -3,7 +3,8 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div>
-            <h1>Nothing remains here. Please search another route!!!</h1>
+            <img className='w-100'
+                src="https://shots.codepen.io/ykadosh/pen/wvPOdmb-1280.jpg?version=1648384276" alt="" />
         </div>
     );
 };
