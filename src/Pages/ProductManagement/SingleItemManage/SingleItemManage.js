@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SingleItemManage = ({ product }) => {
-    const { name, price, quantity, supplierName } = product;
+const SingleItemManage = ({ product, handleDeleteItem }) => {
+    const { _id, name, price, quantity, supplierName } = product;
     return (
         <div className='col-12 col-sm-6 col-md-4'>
             <div className="card border-success mb-3">
@@ -20,7 +20,8 @@ const SingleItemManage = ({ product }) => {
                     </p>
                 </div>
                 <div className="card-footer bg-transparent border-success">
-                    <button className='btn btn-secondary w-100'>
+                    <button onClick={() => handleDeleteItem(_id)}
+                        className='btn btn-secondary w-100'>
                         Delete Item
                     </button>
                 </div>
