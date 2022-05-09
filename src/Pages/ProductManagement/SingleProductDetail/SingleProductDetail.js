@@ -21,6 +21,7 @@ const SingleProductDetail = () => {
         const updatedQuantity = { newQuantity };
 
         const url = `http://localhost:5000/product/${id}`;
+        console.log(url)
         fetch(url, {
             method: 'PUT',
             headers: {
