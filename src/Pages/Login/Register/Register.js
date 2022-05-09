@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 
 const Register = () => {
     const nameRef = useRef('');
@@ -28,6 +29,10 @@ const Register = () => {
             setErr(errMessage);
         }
     }, [error, updateError]);
+
+    if (loading || updating) {
+        return <LoadingSpinner></LoadingSpinner>;
+    }
 
     const handleRegister = async (e) => {
         e.preventDefault();

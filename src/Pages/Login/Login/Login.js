@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -25,11 +26,15 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, updateError] = useSendPasswordResetEmail(auth);
 
     useEffect(() => {
-        if (error) {
-            const errMessage = <p>Error: {error?.message}</p>;
+        if (error || updateError) {
+            const errMessage = <p>Error: {error?.message} {updateError?.message}</p>;
             setErr(errMessage);
         }
-    }, [error]);
+    }, [error, updateError]);
+
+    if (loading || sending) {
+        return <LoadingSpinner></LoadingSpinner>;
+    }
 
     const handleLogin = (e) => {
         e.preventDefault();

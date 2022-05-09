@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 
 const SocialLogin = () => {
     const navigate = useNavigate();
@@ -11,6 +12,10 @@ const SocialLogin = () => {
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
+
+    if (googleLoading || githubLoading) {
+        return <LoadingSpinner></LoadingSpinner>;
+    }
 
     if (googleUser || githubUser) {
         navigate(from, { replace: true });
