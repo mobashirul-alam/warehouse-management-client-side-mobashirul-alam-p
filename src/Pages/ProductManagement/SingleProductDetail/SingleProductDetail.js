@@ -58,7 +58,7 @@ const SingleProductDetail = () => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className="col-8">
+                <div className="col-12 col-md-8">
                     <div className='d-flex justify-content-center'>
                         <img className='w-50' src={img} alt="" />
                     </div>
@@ -85,7 +85,7 @@ const SingleProductDetail = () => {
                         Delivered
                     </button>
                 </div>
-                <div className="col-4 mt-5 text-center">
+                <div className="col-12 col-md-4 mt-5 text-center">
                     <h3>Restock The Items</h3>
                     <form onSubmit={() => handleRestock(_id)}>
                         <input ref={restockItemRef} className='px-2 py-1' type="number" name="restockItem" id="" placeholder='Quantity' />

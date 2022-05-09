@@ -8,7 +8,7 @@ const Faqs = () => {
             <p className='display-6 text-center'>Fitness Pro Equipment Warehouse FAQS</p>
             <p className='fs-2 text-center'>Frequently Asked Question</p>
             <div className='row'>
-                <div className='col-7 my-auto'>
+                <div className='col-12 col-md-7 my-auto'>
                     <Accordion defaultActiveKey="0" flush>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Why should your choose Fitness Pro ?</Accordion.Header>
@@ -37,8 +37,8 @@ const Faqs = () => {
                         </Accordion.Item>
                     </Accordion>
                 </div>
-                <div className='col-5'>
-                    <img src={logo} alt="" />
+                <div className='col-12 col-md-5'>
+                    <img className='img-fluid' src={logo} alt="" />
                 </div>
             </div>
         </div>

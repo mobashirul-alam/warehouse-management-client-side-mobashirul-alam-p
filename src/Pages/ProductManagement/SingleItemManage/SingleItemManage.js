@@ -3,7 +3,7 @@ import React from 'react';
 const SingleItemManage = ({ product, handleDeleteItem }) => {
     const { _id, name, price, quantity, supplierName } = product;
     return (
-        <div className='col-12 col-sm-6 col-md-4'>
+        <div className='col-12 col-sm-6 col-lg-4'>
             <div className="card border-success mb-3">
                 <div className="card-header bg-transparent border-success">
                     <h5 className="card-title">{name}</h5>

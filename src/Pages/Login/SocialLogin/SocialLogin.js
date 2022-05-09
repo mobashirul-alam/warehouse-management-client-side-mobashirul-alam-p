@@ -31,12 +31,12 @@ const SocialLogin = () => {
             <p className='text-danger'>{googleError?.message}{githubError?.message}</p>
             <div className='d-flex justify-content-center mb-3'>
                 <button onClick={() => signInWithGoogle()}
-                    className='d-flex align-items-center justify-content-around rounded-3 w-25 fs-3 me-5 btn btn-light border-1 border-success'>
+                    className='d-md-flex align-items-center justify-content-around rounded-3 w-25 fs-3 me-5 btn btn-light border-1 border-success'>
                     <i className="fa-brands fa-google text-primary"></i>
                     <p className='mb-0'>Google Sign in</p>
                 </button>
                 <button onClick={() => signInWithGithub()}
-                    className='d-flex align-items-center justify-content-around rounded-3 w-25 fs-3 ms-5 btn btn-light border-1 border-success'>
+                    className='d-md-flex align-items-center justify-content-around rounded-3 w-25 fs-3 ms-5 btn btn-light border-1 border-success'>
                     <i className="fa-brands fa-github"></i>
                     <p className='mb-0'>Github Sign in</p>
                 </button>

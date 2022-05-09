@@ -38,7 +38,7 @@ const MyItems = () => {
             <div className='row'>
                 {
                     myProducts.map(product => {
-                        return <div key={product._id} className='col-12 col-sm-6 col-md-4'>
+                        return <div key={product._id} className='col-12 col-sm-6 col-lg-4'>
                             <div className="card border-success mb-3">
                                 <div className="card-header bg-transparent border-success">
                                     <h5 className="card-title">{product.name}</h5>
