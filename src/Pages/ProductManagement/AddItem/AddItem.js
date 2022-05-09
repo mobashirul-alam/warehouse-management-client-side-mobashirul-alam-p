@@ -9,7 +9,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
         console.log(data)
-        const url = `http://localhost:5000/products`;
+        const url = `https://fitness-pro-equipment-house.herokuapp.com/products`;
         fetch(url, {
             method: "POST",
             headers: {

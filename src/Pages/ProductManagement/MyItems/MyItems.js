@@ -7,7 +7,7 @@ const MyItems = () => {
     const [myProducts, setMyProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/userProduct?email=${user.email}`;
+        const url = `https://fitness-pro-equipment-house.herokuapp.com/userProduct?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyProducts(data))
@@ -18,7 +18,7 @@ const MyItems = () => {
     const handleDeleteItem = id => {
         const proceed = window.confirm('Are you sure to delete ?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://fitness-pro-equipment-house.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -10,7 +10,7 @@ const SingleProductDetail = () => {
     const restockItemRef = useRef();
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://fitness-pro-equipment-house.herokuapp.com/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -20,8 +20,7 @@ const SingleProductDetail = () => {
         const newQuantity = parseInt(quantity) - 1;
         const updatedQuantity = { newQuantity };
 
-        const url = `http://localhost:5000/product/${id}`;
-        console.log(url)
+        const url = `https://fitness-pro-equipment-house.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -35,23 +34,24 @@ const SingleProductDetail = () => {
             })
     };
 
-    const handleRestock = (id, e) => {
+    const handleRestockBtn = (id, e) => {
+        e.preventDefault();
         const restockQuantity = restockItemRef.current.value;
         const newQuantity = parseInt(quantity) + parseInt(restockQuantity);
-        const updatedQuantity = { newQuantity };
+        const restockedQuantity = { newQuantity };
 
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://fitness-pro-equipment-house.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(updatedQuantity)
+            body: JSON.stringify(restockedQuantity)
         })
             .then(res => res.json())
             .then(data => {
                 e.target.reset();
-                // toast('Product delivered successfully.');
+                toast('Item restock successful');
             })
     }
 
@@ -87,7 +87,7 @@ const SingleProductDetail = () => {
                 </div>
                 <div className="col-12 col-md-4 mt-5 text-center">
                     <h3>Restock The Items</h3>
-                    <form onSubmit={() => handleRestock(_id)}>
+                    <form onSubmit={() => handleRestockBtn(_id)}>
                         <input ref={restockItemRef} className='px-2 py-1' type="number" name="restockItem" id="" placeholder='Quantity' />
                         <br />
                         <input className='btn btn-primary mt-2' type="submit" value="Restock" />
