@@ -23,16 +23,15 @@
 
 ## Technology used in this project
 * React
-* Node
-* Firebase
 * React Router
-* Express
+* React Hook Form
+* React Firebase Hooks
 * Bootstrap
 * React Bootstrap
-* MongoDb
-* React Firebase Hooks
-* React Hook Form
-* React Toastify
+* React-toastify
+* Express.js
+* Node.js
+* MongoDB
 
 ## Language used in this project
 * HTML
